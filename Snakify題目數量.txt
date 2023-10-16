@@ -1,0 +1,15 @@
+Input, print and numbers:         9
+Conditions: if, then, else:            12
+Integer and float numbers:          10
+Teach Python 3 and web design with 200+ exercises:
+For loop with range:          10
+Strings:            12
+共53題
+
+While loop:                16
+Lists:             13
+Functions and recursion:      6
+Two-dimensional lists (arrays):        8
+Sets:        8
+Dictionaries:        8
+共43題

@@ -1,0 +1,2167 @@
+3333Snakify
+===================
+Last digit of integer：
+a = int(input())
+print(a % 10)
+
+-----------------------------------
+Tens digit：
+n = int(input())
+print(n // 10 % 10)
+
+-----------------------------------
+Sum of digits：
+n = int(input())
+a = n // 100
+b = n // 10 % 10
+c = n % 10
+print(a + b + c)
+
+-----------------------------------
+Fractional part：
+x = float(input())
+print(x - int(x))
+
+-----------------------------------
+First digit after decimal point：
+x = float(input())
+print(int(x * 10) % 10)
+
+-----------------------------------
+Car route：
+from math import ceil
+n = int(input())
+m = int(input())
+print(ceil(m / n))
+
+-----------------------------------
+Digital clock：
+n = int(input())
+h = n // 60
+m = n % 60 #除60的餘數
+print(h,m)
+
+-----------------------------------
+Total cost：
+a = int(input()) #美元
+b = int(input()) #美分
+n = int(input()) #數量
+cost = n * (100 * a + b) #将价格转换为美分，然后乘以数量
+print(cost // 100, cost % 100)
+
+-----------------------------------
+Clock face - 1：
+h = int(input())
+m = int(input())
+s = int(input())
+
+print(h * 30 + m * 30 / 60 + s * 30 / 3600)
+
+-----------------------------------
+Clock face - 2：
+a = float(input())
+print(a % 30 * 12)
+
+===================
+
+===================
+Minimum of two numbers：
+a = int(input())
+b = int(input())
+if a < b:
+    print(a)
+else:
+    print(b)
+
+-----------------------------------
+Sign function：
+a = int(input())
+if a > 0:
+    print(1)
+elif a == 0:
+    print(0)
+else:
+    print(-1)
+
+-----------------------------------
+Minimum of three numbers：
+a = int(input())
+b = int(input())
+c = int(input())
+if b >= a <= c:
+    print(a)
+elif a >= b <= c:
+    print(b)
+else:
+    print(c)
+
+-----------------------------------
+Equal numbers：
+a = int(input())
+b = int(input())
+c = int(input())
+if a == b == c:
+    print(3)
+elif a == b or b == c or a == c:
+    print(2)
+else:
+    print(0)
+
+-----------------------------------
+Rook move：
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if x1 == x2 or y1 == y2:#確保水平或垂直移動
+    print('YES')
+else:
+    print('NO')
+
+-----------------------------------
+Chess board - same color：
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if (x1 + y1 + x2 + y2) % 2 == 0:
+    print('YES')
+else:
+    print('NO')
+
+-----------------------------------
+King move：
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+
+if 1>=x2-x1>=-1 and 1>=y2-y1>=-1:
+    print('YES')
+
+-----------------------------------
+Bishop moves：
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+
+if abs(x2-x1) == abs(y2-y1):
+    print('YES')
+else:
+    print('NO')
+
+-----------------------------------
+Queen move：
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+
+if x2-x1==0 or y2-y1==0:
+    print('YES')
+elif abs(x2-x1)==abs(y2-y1):
+    print('YES')
+else:
+    print('NO')
+-----------------------------------
+Knight move：
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+
+if abs(x2-x1)==2 and abs(y2-y1)==1:
+    print('YES')
+elif abs(x2-x1)==1 and abs(y2-y1)==2:
+    print('YES')
+else:
+    print('NO')
+
+-----------------------------------
+Chocolate bar：
+n = int(input())
+m = int(input())
+k = int(input())
+
+# 判断是否可以分割
+if (k <= n * m) and ((k % n == 0) or (k % m == 0)):
+    print("YES")
+else:
+    print("NO")
+-----------------------------------
+Leap year：
+year = int(input())
+if (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0):
+    print('LEAP')
+else:
+    print('COMMON')
+
+
+===================
+
+===================
+Series - 1：
+a=int(input())
+b=int(input())
+
+for i in range(a, b+1):
+    print(i)
+
+-----------------------------------
+Series - 2：
+a=int(input())
+b=int(input())
+
+if a<b:
+    for i in range(a, b+1):
+        print(i)
+else:
+    for i in range(a, b-1,-1):
+        print(i)
+
+-----------------------------------
+Sum of ten numbers：
+a = 0
+# 读取并累加 10 个数字的总和
+for i in range(10):
+    b = int(input())
+    a += b
+# 打印总和
+print(a)
+
+-----------------------------------
+Sum of N numbers：
+# 从输入中读取N的值
+N = int(input())
+
+# 初始化一个变量来存储总和
+total = 0
+
+# 读取并累加N个整数的总和
+for i in range(N):
+    num = int(input())
+    total += num
+
+# 打印总和
+print(total)
+
+
+n = int(input())
+res = 0
+for i in range(n):
+    res += int(input())
+print(res)
+
+-----------------------------------
+Sum of cubes：
+a = int(input())
+b = 0
+
+for i in range(1,a+1):
+    b=i**3+b
+    
+print(b)
+
+-----------------------------------
+Factorial：
+a = int(input())
+b = 1
+
+for i in range(1,a+1):
+    b=i*b
+print(b)
+
+-----------------------------------
+The number of zeros：
+# 从输入中读取N的值
+N = int(input())
+
+# 初始化一个变量来存储等于零的数字的数量
+zero_count = 0
+
+# 读取N个整数并计算等于零的数字的数量
+for i in range(N):
+    num = int(input())
+    if num == 0:
+        zero_count += 1
+
+# 打印等于零的数字的数量
+print(zero_count)
+
+-----------------------------------
+Adding factorials：
+# 输入一个整数 n
+n = int(input())
+
+# 初始化总和为 0
+a = 0
+
+# 计算阶乘和
+b = 1
+for i in range(1, n + 1):
+    b *= i
+    a += b
+
+# 打印阶乘之和
+print(a)
+
+-----------------------------------
+Ladder：
+# 输入一个整数 n，确保 n <= 9
+n = int(input())
+
+# 使用 sep 参数打印梯子
+for i in range(1, n + 1):
+    print(*range(1, i + 1), sep="", end="\n")
+
+-----------------------------------
+Lost card：
+# 输入一个整数 N
+N = int(input("请输入一个整数 N："))
+
+# 初始化总和变量，用于存储从1到N的所有整数的总和
+total_sum = 0
+
+# 计算从1到N的所有整数的总和
+for i in range(1, N + 1):
+    total_sum += i
+
+# 初始化剩余卡片上的整数的总和
+remaining_sum = 0
+
+# 输入剩余的N-1个整数，并计算它们的总和
+for _ in range(N - 1):
+    num = int(input("请输入一个剩余卡片上的整数："))
+    remaining_sum += num
+
+# 计算遗失卡片上的数字
+missing_number = total_sum - remaining_sum
+
+# 打印遗失卡片上的数字
+print(missing_number)
+
+===================
+
+===================
+Slices：
+
+s = input()
+print(s[2])
+print(s[-2])
+print(s[:5])
+print(s[:-2])
+print(s[::2])
+print(s[1::2])
+print(s[::-1])
+print(s[::-2])
+print(len(s))
+-----------------------------------
+The number of words：
+
+# 給定由空格分隔的單字組成的字串
+input_string = input()
+# 使用count方法來計算單字數量，這裡我們以空格作為分隔符
+word_count = input_string.count(' ') + 1
+# 輸出單字數量
+print( word_count)
+
+或是
+print(input().count(' ') + 1)
+-----------------------------------
+The two halves：
+
+# 給定字串
+input_string = input()
+
+# 將字串切成兩個相等的部分（或前半部分比後半部分多一個字元）
+length = len(input_string)
+middle = (length + 1) // 2
+
+# 列印互換的新字串
+new_string = input_string[middle:] + input_string[:middle]
+print(new_string)
+
+或是
+s = input()
+print(s[(len(s) + 1) // 2:] + s[:(len(s) + 1) // 2])
+-----------------------------------
+To swap the two words；
+
+# 给定由两个单词组成且以空格分隔的字符串
+input_string = input()
+
+# 使用split方法将字符串分成两个单词
+words = input_string.split()
+
+# 交换第一个和第二个单词的位置并打印新字符串
+new_string = words[1] + " " + words[0]
+print(new_string)
+
+或是
+s = input()
+first_word = s[:s.find(' ')]
+second_word = s[s.find(' ') + 1:]
+print(second_word + ' ' + first_word)
+-----------------------------------
+The first and last occurrence：
+
+# 给定一个可能包含感兴趣字母"f"的字符串
+input_string =  input()
+
+# 查找字母"f"第一次出现的索引位置
+first_index = input_string.find("f")
+
+# 查找字母"f"最后一次出现的索引位置
+last_index = input_string.rfind("f")
+
+# 检查字母"f"是否存在，并输出索引位置
+if first_index != -1:
+    print(first_index)
+    if first_index != last_index:
+        print(last_index)
+
+或是
+s = input()
+if s.count('f') == 1:
+    print(s.find('f'))
+elif s.count('f') >= 2:
+    print(s.find('f'), s.rfind('f'))
+-----------------------------------
+The second occurrence：
+
+# 给定一个可能包含感兴趣字母"f"的字符串
+input_string = input()
+
+# 查找字母"f"第一次出现的索引位置
+first_index = input_string.find("f")
+
+# 检查字母"f"是否存在，如果不存在则输出-2
+if first_index == -1:
+    print("-2")
+else:
+    # 使用find方法查找字母"f"第二次出现的索引位置
+    second_index = input_string.find("f", first_index + 1)
+    
+    # 检查是否找到第二次出现的索引位置，如果找到则输出，否则输出-1
+    if second_index != -1:
+        print(second_index)
+    else:
+        print("-1")
+
+或是
+s = input()
+if s.count('f') == 1:
+    print(-1)
+elif s.count('f') < 1:
+    print(-2)
+else:
+    print(s.find('f', s.find('f') + 1))
+-----------------------------------
+Remove the fragment：
+
+# 给定一个字符串，其中字母"h"至少出现两次
+input_string = input()
+
+# 找到第一次出现字母"h"的索引位置
+first_h_index = input_string.find("h")
+
+# 找到最后一次出现字母"h"的索引位置
+last_h_index = input_string.rfind("h")
+
+# 如果找到了第一次和最后一次出现字母"h"的索引位置，则删除它们之间的所有字符
+if first_h_index != -1 and last_h_index != -1:
+    result_string = input_string[:first_h_index] + input_string[last_h_index + 1:]
+    print(result_string)
+else:
+    # 如果字母"h"没有出现至少两次，则输出原始字符串
+    print(input_string)
+
+或是
+s = input()
+s = s[:s.find('h')] + s[s.rfind('h') + 1:]
+print(s)
+-----------------------------------
+Reverse the fragment：
+
+# 给定一个字符串，其中字母"h"至少出现两次
+input_string = input()
+
+# 找到第一次出现字母"h"的索引位置
+first_h_index = input_string.find("h")
+
+# 找到最后一次出现字母"h"的索引位置
+last_h_index = input_string.rfind("h")
+
+# 如果找到了第一次和最后一次出现字母"h"的索引位置，则反转它们之间的字符序列
+if first_h_index != -1 and last_h_index != -1:
+    reversed_sequence = input_string[first_h_index+1:last_h_index][::-1]
+    
+    # 将反转后的字符序列重新插入到原始字符串中
+    result_string = input_string[:first_h_index+1] + reversed_sequence + input_string[last_h_index:]
+    print(result_string)
+else:
+    # 如果字母"h"没有出现至少两次，则输出原始字符串
+    print(input_string)
+
+或是
+s = input()
+a = s[:s.find('h')] 
+b = s[s.find('h'):s.rfind('h') + 1]
+c = s[s.rfind('h') + 1:]
+s = a + b[::-1] + c
+print(s)
+-----------------------------------
+Replace the substring：
+
+# 给定一个字符串
+input_string = input()
+# 使用replace方法替换所有数字1为单词1
+result_string = input_string.replace("1", "one")
+
+# 打印替换后的字符串
+print(result_string)
+
+或是
+print(input().replace('1', 'one'))
+-----------------------------------
+Delete a character：
+
+# 给定一个字符串
+input_string = input()
+
+# 使用replace方法删除所有字符@
+result_string = input_string.replace("@", "")
+
+# 打印删除字符@后的字符串
+print(result_string)
+
+或是
+print(input().replace('@', ''))
+-----------------------------------
+Replace within the fragment：
+
+# 给定一个字符串
+input_string = input()
+
+# 找到第一个字母"h"的索引位置
+first_h_index = input_string.find("h")
+
+# 找到最后一个字母"h"的索引位置
+last_h_index = input_string.rfind("h")
+
+# 如果找到了第一个和最后一个字母"h"的索引位置，则进行替换
+if first_h_index != -1 and last_h_index != -1:
+    # 使用切片将字符串分成三部分：第一个字母"h"之前、第一个和最后一个字母"h"之间、最后一个字母"h"之后
+    part1 = input_string[:first_h_index+1]
+    part2 = input_string[first_h_index+1:last_h_index].replace("h", "H")
+    part3 = input_string[last_h_index:]
+    
+    # 将三部分重新组合为新的字符串
+    result_string = part1 + part2 + part3
+
+或是
+s = input()
+a = s[:s.find('h') + 1] 
+b = s[s.find('h') + 1:s.rfind('h')]
+c = s[s.rfind('h'):]
+s = a + b.replace('h', 'H') + c
+print(s)
+-----------------------------------
+Delete every third character：
+
+ 给定一个字符串
+input_string = input()
+
+# 使用列表推導式過濾掉索引可被 3 整除的字符
+filtered_characters = [char for index, char in enumerate(input_string) if index % 3 != 0]
+
+# 將過濾後的字元連接回字串
+result_string = ''.join(filtered_characters)
+
+# 列印結果字串
+print(result_string)
+
+或是
+s = input()
+t = ''
+for i in range(len(s)):
+    if i % 3 != 0:
+        t = t + s[i]
+print(t)
+===================
+
+===================
+List of squares：
+a = int(input())
+b = 1
+c = 0
+
+while c <= a:
+    c = b * b
+    if c <= a:
+        print(c)
+    b += 1
+
+或是
+n = int(input())
+i = 1
+while i ** 2 <= n:
+    print(i ** 2)
+    i += 1
+-----------------------------------
+Least divisor：
+# 给定不小于2的整数
+N = int(input())
+
+# 初始化除数
+divisor = 2
+
+# 使用 while 循环找到大于1的最小整数除数
+while N % divisor != 0:
+    divisor += 1
+
+# 打印找到的最小整数除数
+print(divisor)
+
+或是
+n = int(input())
+i = 2
+while n % i != 0:
+    i += 1
+print(i)
+-----------------------------------
+The power of two：
+
+# 初始化指数和 2^x 的结果
+exponent = 0
+result = 1
+
+# 以 2 的指数递增，直到 2^x 大于 N
+while result * 2 <= N:
+    result *= 2
+    exponent += 1
+
+# 打印指数值和 2^x 的结果
+print(exponent,result)
+
+或是
+
+n = int(input())
+two_in_power = 2
+power = 1
+while two_in_power <= n:
+    two_in_power *= 2
+    power += 1
+print(power - 1, two_in_power // 2)
+-----------------------------------
+Morning jog：
+# 输入初始距离x和目标距离y
+x = float(input())
+y = float(input())
+
+# 初始化天数和当前距离
+days = 1
+current_distance = x
+
+# 使用While循环计算所需的天数
+while current_distance < y:
+    current_distance += 0.10 * current_distance  # 增加10%的距离
+    days += 1
+
+# 打印所需的天数
+print(days)
+
+或是
+
+x = int(input())
+y = int(input())
+i = 1
+while x < y:
+    x *= 1.1
+    i += 1
+print(i)
+-----------------------------------
+The length of the sequence：
+# 初始化序列长度计数器
+sequence_length = 0
+
+# 使用循环读取整数并计算序列长度
+while True:
+    num = int(input())
+    if num == 0:
+        break  # 如果输入为0，则结束循环
+    sequence_length += 1
+
+# 打印序列的长度
+print(sequence_length)
+
+或是
+
+len = 0
+while int(input()) != 0:
+    len += 1
+print(len)
+-----------------------------------
+The sum of the sequence：
+
+b = 0
+a = int(input())
+
+while a != 0:
+    b = b + a
+    a = int(input())
+
+print(b)
+
+或是
+
+sum = 0
+element = int(input())
+while element != 0:
+    sum += element
+    element = int(input())
+print(sum)
+
+-----------------------------------
+The average of the sequence：
+
+a = int(input())
+b = 0
+c = 0
+
+while a != 0:
+    b = b + a
+    c +=1
+    a = int(input())
+
+else:
+    print(b/c)
+
+或是
+
+sum = 0
+len = 0
+element = int(input())
+while element != 0:
+    sum += element
+    len += 1
+    element = int(input())
+print(sum / len)
+
+-----------------------------------
+The maximum of the sequence：
+
+b = 0
+a = int(input())
+
+while a != 0:
+    if a >= b:
+        b = a
+    a = int(input())
+
+print(b)
+
+或是
+
+max = 0
+element = -1
+while element != 0:
+    element = int(input())
+    if element > max:
+        max = element
+print(max)
+-----------------------------------
+The index of the maximum of a sequence：
+
+max = 0
+index_of_max = -1
+element = -1
+len = 1
+while element != 0:
+    element = int(input())
+    if element > max:
+        max = element
+        index_of_max = len
+    len += 1
+print(index_of_max)
+
+-----------------------------------
+The number of even elements of the sequence：
+
+# 初始化偶数元素数量计数器
+a = 0
+
+# 使用循环读取整数序列
+while True:
+    num = int(input())
+    if num == 0:
+        break  # 输入为0时结束循环
+    if num % 2 == 0:
+        a += 1
+
+# 打印以数字0结尾的偶数元素的数量
+print(a)
+
+或是
+
+num_even = -1
+element = -1
+while element != 0:
+    element = int(input())
+    if element % 2 == 0:
+        num_even += 1
+print(num_even)
+
+-----------------------------------
+The number of elements that are greater than the previous one：
+
+# Initialize a counter for elements greater than their neighbors above
+count = 0
+
+# Initialize variables to store the previous and current numbers
+prev_num = None
+current_num = int(input())
+
+# Read integers and check if they are greater than their neighbors above
+while current_num != 0:
+    if prev_num is not None and current_num > prev_num:
+        count += 1
+    prev_num = current_num
+    current_num = int(input("Enter an integer (0 to end): "))
+
+# Print the count of elements greater than their neighbors above
+print(count)
+
+
+或是
+
+prev = int(input())
+answer = 0
+while prev != 0:
+    next = int(input())
+    if next != 0 and prev < next:
+        answer += 1
+    prev = next
+print(answer)
+
+-----------------------------------
+The second maximum：
+
+# Initialize variables to store the largest and second-largest elements
+largest = second_largest = float('-inf')
+
+# Read the first element of the sequence
+num = int(input())
+
+# Read integers and update the largest and second-largest elements
+while num != 0:
+    if num > largest:
+        second_largest = largest
+        largest = num
+    elif num > second_largest and num != largest:
+        second_largest = num
+    num = int(input("Enter a positive integer (0 to end): "))
+
+# Print the second-largest element
+print(second_largest)
+
+或是
+
+first_max = int(input())
+second_max = int(input())
+if first_max < second_max:
+    first_max, second_max = second_max, first_max
+element = int(input())
+while element != 0:
+    if element > first_max:
+        second_max, first_max = first_max, element
+    elif element > second_max:
+        second_max = element
+    element = int(input())
+print(second_max)
+
+-----------------------------------
+The number of elements equal to the maximum：
+
+# Initialize variables to store the largest element and a counter
+largest = None
+count = 0
+
+# Read the first element of the sequence
+num = int(input("Enter an integer (0 to end): "))
+
+# Read integers and update the largest element and the count
+while num != 0:
+    if largest is None or num > largest:
+        largest = num
+        count = 1
+    elif num == largest:
+        count += 1
+    num = int(input("Enter an integer (0 to end): "))
+
+# Print the count of elements equal to the largest element
+print(count)
+
+或是
+
+maximum = 0
+num_maximal = 0
+element = -1
+while element != 0:
+    element = int(input())
+    if element > maximum:
+        maximum, num_maximal = element, 1
+    elif element == maximum:
+        num_maximal += 1        
+print(num_maximal)
+-----------------------------------
+Fibonacci numbers：
+
+# 输入非负整数n
+n = int(input("请输入一个非负整数 n: "))
+
+# 初始化斐波那契数列的前两个元素
+fibonacci = [0, 1]
+
+# 使用for循环计算第n个斐波那契数
+for i in range(2, n + 1):
+    next_fib = fibonacci[i - 1] + fibonacci[i - 2]
+    fibonacci.append(next_fib)
+
+# 打印第n个斐波那契数
+print(fibonacci[n])
+
+
+或是
+
+n = int(input())
+if n == 0:
+    print(0)
+else:
+    a, b = 0, 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    print(b)
+
+-----------------------------------
+The index of a Fibonacci number：
+
+a = int(input())
+if a == 0:
+    print(0)
+else:
+    fib_prev, fib_next = 0, 1
+    n = 1
+    while fib_next <= a:
+        if fib_next == a:
+            print(n)
+            break
+        fib_prev, fib_next = fib_next, fib_prev + fib_next
+        n += 1
+    else:
+        print(-1)
+
+或是
+
+# 输入整数a
+a = int(input("请输入一个整数 a: "))
+
+# 初始化斐波那契数列的前两个元素
+fibonacci = [0, 1]
+
+# 使用循环计算斐波那契数列，直到找到a或超过a
+n = 2
+while True:
+    next_fib = fibonacci[n - 1] + fibonacci[n - 2]
+    if next_fib == a:
+        print(n)
+        break
+    elif next_fib > a:
+        print(-1)
+        break
+    fibonacci.append(next_fib)
+    n += 1
+
+-----------------------------------
+The maximum number of consecutive equal elements：
+
+# 初始化计数器和最大宽度
+count = 0
+max_width = 0
+
+# 读取第一个整数
+num = int(input("输入整数 (0 结束): "))
+
+# 读取整数并计算最宽片段的长度
+while num != 0:
+    if count == 0 or num == prev_num:
+        count += 1
+    else:
+        #取最大值
+        max_width = max(max_width, count)
+        count = 1
+    prev_num = num
+    num = int(input("输入整数 (0 结束): "))
+
+# 最后一个片段的宽度可能是最宽的，所以再次更新max_width
+max_width = max(max_width, count)
+
+# 打印最宽片段的长度
+print(max_width)
+
+或是
+
+prev = -1
+curr_rep_len = 0
+max_rep_len = 0
+element = int(input())
+while element != 0:
+    if prev == element:
+        curr_rep_len += 1
+    else:
+        prev = element
+        max_rep_len = max(max_rep_len, curr_rep_len)
+        curr_rep_len = 1
+    element = int(input())
+max_rep_len = max(max_rep_len, curr_rep_len)
+print(max_rep_len)
+
+===================
+
+===================
+Even indices：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input()
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 使用循环找到并打印具有偶数索引的元素
+for i in range(0, len(numbers), 2):
+    print(numbers[i])
+
+或是
+
+a = input().split()
+for i in range(0, len(a), 2):
+    print(a[i])
+
+-----------------------------------
+Even elements：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input("请输入一个以空格分隔的数字列表: ")
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 使用 for 循环遍历列表，直接遍历元素本身
+for number in numbers:
+    if number % 2 == 0:  # 检查是否为偶数
+        print(number)
+
+
+或是
+
+a = [int(i) for i in input().split()]
+for elem in a:
+    if elem % 2 == 0:
+        print(elem)
+-----------------------------------
+Greater than previous：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input("请输入一个以空格分隔的数字列表: ")
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 初始化前一个元素
+previous_element = numbers[0]
+
+# 使用 for 循环找到并打印大于前一个元素的元素
+for number in numbers:
+    if number > previous_element:
+        print(number)
+    previous_element = number
+
+或是
+
+a = [int(i) for i in input().split()]
+for i in range(1, len(a)):
+    if a[i] > a[i - 1]:
+        print(a[i])
+
+-----------------------------------
+Neighbors of the same sign：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input("请输入一个以空格分隔的数字列表: ")
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 使用 for 循环查找相邻元素
+for i in range(len(numbers) - 1):
+    if (numbers[i] > 0 and numbers[i + 1] > 0) or (numbers[i] < 0 and numbers[i + 1] < 0):
+        print(numbers[i], numbers[i + 1])
+        break
+
+或是
+
+a = [int(i) for i in input().split()]
+for i in range(1, len(a)):
+    if a[i - 1] * a[i] > 0:
+        print(a[i - 1], a[i])
+        break
+-----------------------------------
+Greater than neighbours：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input("请输入一个以空格分隔的数字列表: ")
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 初始化计数器
+count = 0
+
+# 使用 for 循环查找大于相邻元素的数量
+for i in range(1, len(numbers) - 1):
+    if numbers[i] > numbers[i - 1] and numbers[i] > numbers[i + 1]:
+        count += 1
+
+# 打印大于相邻元素的数量
+print(count)
+
+或是
+
+a = [int(i) for i in input().split()]
+counter = 0
+for i in range(1, len(a) - 1):
+    if a[i - 1] < a[i] > a[i + 1]:
+        counter += 1
+print(counter)
+
+-----------------------------------
+The largest element：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input("请输入一个以空格分隔的数字列表: ")
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 初始化最大元素和其索引
+max_element = numbers[0]
+max_index = 0
+
+# 使用 for 循环查找最大元素和其索引
+for i in range(1, len(numbers)):
+    if numbers[i] > max_element:
+        max_element = numbers[i]
+        max_index = i
+
+# 打印最大元素的值和索引
+print(max_element)
+print(max_index)
+
+或是
+
+index_of_max = 0
+a = [int(i) for i in input().split()]
+for i in range(1, len(a)):
+    if a[i] > a[index_of_max]:
+        index_of_max = i
+print(a[index_of_max], index_of_max)
+
+-----------------------------------
+The number of distinct elements：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input("请输入一个按升序排序的数字列表: ")
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 初始化不同元素的数量
+distinct_count = 0
+
+# 使用 for 循环查找不同元素的数量
+for i in range(len(numbers) - 1):
+    if numbers[i] != numbers[i + 1]:
+        distinct_count += 1
+
+# 加上最后一个元素，因为最后一个元素不会在循环中比较
+distinct_count += 1
+
+# 打印不同元素的数量
+print(distinct_count)
+
+或是
+
+a = [int(i) for i in input().split()]
+num_distinct = 1
+for i in range(0, len(a) - 1):
+    if a[i] != a[i + 1]:
+        num_distinct += 1
+print(num_distinct)
+
+-----------------------------------
+Swap neighbours：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input("请输入一个数字列表: ")
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 初始化结果列表
+result = []
+
+# 使用 for 循环进行成对交换
+for i in range(0, len(numbers) - 1, 2):
+    result.append(numbers[i + 1])
+    result.append(numbers[i])
+
+# 如果列表有奇数个元素，保留最后一个元素
+if len(numbers) % 2 == 1:
+    result.append(numbers[-1])
+
+# 打印结果列表
+for x in result:
+  print(x)
+
+或是
+
+a = [int(i) for i in input().split()]
+for i in range(1, len(a), 2):
+    a[i - 1], a[i] = a[i], a[i - 1]
+print(' '.join([str(i) for i in a]))
+
+-----------------------------------
+Swap min and max：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input("请输入一个数字列表: ")
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 找到列表中的最小和最大值以及它们的索引
+min_value = min(numbers)
+max_value = max(numbers)
+min_index = numbers.index(min_value)
+max_index = numbers.index(max_value)
+
+# 交换最小和最大元素
+numbers[min_index] = max_value
+numbers[max_index] = min_value
+
+# 打印结果列表
+for x in numbers:
+  print(x)
+
+或是
+
+a = [int(s) for s in input().split()]
+index_of_min = 0
+index_of_max = 0
+for i in range(1, len(a)):
+    if a[i] > a[index_of_max]:
+        index_of_max = i
+    if a[i] < a[index_of_min]:
+        index_of_min = i
+a[index_of_min], a[index_of_max] = a[index_of_max], a[index_of_min]
+print(' '.join([str(i) for i in a]))
+
+-----------------------------------
+The number of pairs of equal：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input("请输入一个数字列表: ")
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 创建一个字典来跟踪每个元素的出现次数
+element_count = {}
+
+# 遍历列表中的元素，并更新元素出现次数
+for num in numbers:
+    element_count[num] = element_count.get(num, 0) + 1
+
+# 初始化计数器
+count = 0
+
+# 遍历字典，计算每个元素对的数量
+for key, value in element_count.items():
+    if value >= 2:
+        count += value * (value - 1) // 2
+
+# 打印具有相等值的元素对的数量
+print(count)
+
+或是
+
+a = [int(s) for s in input().split()]
+counter = 0
+for i in range(len(a)):
+    for j in range(i + 1, len(a)):
+        if a[i] == a[j]:
+            counter += 1
+print(counter)
+
+-----------------------------------
+Unique elements：
+
+# 获取用户输入的数字列表，以空格分隔
+input_numbers = input("请输入一个数字列表: ")
+
+# 将输入的字符串分割成数字列表
+numbers = [int(x) for x in input_numbers.split()]
+
+# 创建一个字典来跟踪每个元素的出现次数
+element_count = {}
+
+# 创建一个列表来存储仅出现一次的元素
+unique_elements = []
+
+# 遍历列表中的元素，并更新元素出现次数
+for num in numbers:
+    element_count[num] = element_count.get(num, 0) + 1
+
+# 遍历列表中的元素，找到仅出现一次的元素
+for num in numbers:
+    if element_count[num] == 1:
+        unique_elements.append(num)
+
+# 打印仅出现一次的元素
+for x in unique_elements:
+  print(x)
+
+或是
+
+a = [int(s) for s in input().split()]
+for i in range(len(a)):
+    for j in range(len(a)):
+        if i != j and a[i] == a[j]:
+            break
+    else:
+        print(a[i], end=' ')
+
+-----------------------------------
+Queens：
+
+def can_queens_attack(queens):
+    for i in range(8):
+        for j in range(i+1, 8):
+            # 检查是否在同一行或同一列
+            if queens[i][0] == queens[j][0] or queens[i][1] == queens[j][1]:
+                return "YES"
+            # 检查是否在同一对角线上
+            if abs(queens[i][0] - queens[j][0]) == abs(queens[i][1] - queens[j][1]):
+                return "YES"
+    return "NO"
+
+# 输入八个皇后的位置坐标
+queens = []
+for _ in range(8):
+    x, y = map(int, input().split())
+    queens.append((x, y))
+
+result = can_queens_attack(queens)
+print(result)
+
+或是
+
+n = 8
+x = []
+y = []
+for i in range(n):
+    new_x, new_y = [int(s) for s in input().split()]
+    x.append(new_x)
+    y.append(new_y)
+
+correct = True
+for i in range(n):
+    for j in range(i + 1, n):
+        if x[i] == x[j] or y[i] == y[j] or abs(x[i] - x[j]) == abs(y[i] - y[j]):
+            correct = False
+
+if correct:
+    print('NO')
+else:
+    print('YES')
+-----------------------------------
+The bowling alley：
+
+# 输入瓶的数量 N 和滚动的球的数量 K
+N, K = map(int, input().split())
+
+# 初始化一个长度为 N 的列表，表示瓶的状态，1 表示立着，0 表示倒下
+pins = [1] * N
+
+# 读入每个球击倒的针脚范围
+for _ in range(K):
+    start, end = map(int, input().split())
+    
+    # 将这些范围内的针脚标记为击倒
+    for i in range(start, end + 1):
+        pins[i - 1] = 0
+
+# 打印结果，I 代表立着的针脚，. 代表倒下的针脚
+result = ''.join(['I' if pin == 1 else '.' for pin in pins])
+print(result)
+
+或是
+
+n, k = [int(s) for s in input().split()]
+bahn = ['I'] * n
+for i in range(k):
+    left, right = [int(s) for s in input().split()]
+    for j in range(left - 1, right):
+        bahn[j] = '.'
+print(''.join(bahn))
+
+===================
+
+===================
+The length of the segment：
+
+import math
+
+# 定义计算距离的函数
+def distance(x1, y1, x2, y2):
+    return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+# 读取四个实数
+x1 = float(input("请输入 x1："))
+y1 = float(input("请输入 y1："))
+x2 = float(input("请输入 x2："))
+y2 = float(input("请输入 y2："))
+
+# 使用函数计算距离
+result = distance(x1, y1, x2, y2)
+
+# 打印结果
+print(result)
+
+或是
+
+from math import sqrt
+
+def distance(x1, y1, x2, y2):
+    return sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+print(distance(x1, y1, x2, y2))
+
+-----------------------------------
+Negative exponent：
+
+# 定义计算次幂的函数
+def power(a, n):
+    # 基本情况：n 等于 0，返回 1
+    if n == 0:
+        return 1
+    # 递归情况：计算 a 的 (n-1) 次幂，并乘以 a
+    elif n > 0:
+        return a * power(a, n - 1)
+    # 递归情况：如果 n 为负数，计算倒数的 a 的 (-n) 次幂
+    else:
+        return 1 / power(a, -n)
+
+# 读取输入的正实数和整数
+a = float(input("请输入正实数 a："))
+n = int(input("请输入整数 n："))
+
+# 使用函数计算结果
+result = power(a, n)
+
+# 打印结果
+print(result)
+
+或是
+
+def power(a, n):
+    res = 1
+    for i in range(abs(n)):
+        res *= a
+    if n >= 0:
+        return res
+    else:
+        return 1 / res
+
+print(power(float(input()), int(input())))
+
+-----------------------------------
+Uppercase：
+
+# 定义 Capitalize 函数
+def capitalize(lower_case_word):
+    # 检查输入是否为空
+    if not lower_case_word:
+        return lower_case_word
+
+    # 将单词的第一个字母大写，然后添加其余部分
+    capitalized_word = lower_case_word[0].upper() + lower_case_word[1:]
+
+    return capitalized_word
+
+# 读取输入行，包含多个小写 ASCII 单词，每个单词由空格分隔
+input_line = input("输入一行小写 ASCII 单词：")
+
+# 使用 split() 函数将输入分割成单词列表
+words = input_line.split()
+
+# 对每个单词应用 Capitalize 函数并打印结果
+for word in words:
+    result = capitalize(word)
+    print(result, end=" ")  # 以空格分隔输出的单词
+
+print()  # 换行
+
+或是
+
+def capitalize(word):
+    first_letter_small = word[0]
+    first_letter_big = chr(ord(first_letter_small) - ord('a') + ord('A'))
+    return first_letter_big + word[1:]
+
+source = input().split()
+res = []
+for word in source:
+    res.append(capitalize(word))
+print(' '.join(res))
+
+-----------------------------------
+Exponentiation：
+
+def power(a, n):
+    if n == 0:
+        return 1  # a^0 等于 1
+    else:
+        return a * power(a, n - 1)
+
+# 读取输入值 a 和 n
+a = float(input("输入正实数 a: "))
+n = int(input("输入非负整数 n: "))
+
+# 使用 power 函数计算 a 的 n 次方并打印结果
+result = power(a, n)
+print(result)
+
+或是
+
+def power(a, n):
+    if n == 0:
+        return 1
+    else:
+        return a * power(a, n - 1)
+
+print(power(float(input()), int(input())))
+
+-----------------------------------
+Reverse the sequence：
+
+def reverse_print():
+    num = int(input("请输入一个整数 (输入0结束): "))
+    
+    if num != 0:
+        reverse_print()  # 递归调用函数来获取下一个整数
+    print(num)
+
+# 调用递归函数以相反的顺序打印整数
+reverse_print()
+
+或是
+
+def reverse():
+    x = int(input())
+    if x != 0:
+        reverse()
+    print(x)
+
+reverse()
+
+-----------------------------------
+Fibonacci numbers：
+
+# Dictionary to store previously computed Fibonacci numbers
+fib_cache = {}
+
+def fib(n):
+    # Check if the result is already in the cache
+    if n in fib_cache:
+        return fib_cache[n]
+    
+    # Base cases
+    if n == 0:
+        result = 0
+    elif n == 1:
+        result = 1
+    else:
+        # Recursive call with memoization
+        result = fib(n - 1) + fib(n - 2)
+    
+    # Store the result in the cache
+    fib_cache[n] = result
+    
+    return result
+
+# Get and print the n-th Fibonacci number
+n = int(input("Enter a non-negative integer n: "))
+print(fib(n))
+
+或是
+
+def fib(n):
+    if n == 1 or n == 2:
+        return 1
+    else:
+        return fib(n - 1) + fib(n - 2)
+
+print(fib(int(input())))
+
+===================
+
+===================
+Maximum：
+
+m, n = map(int, input().split())  # 输入行数m和列数n
+max_element = float('-inf')  # 初始化最大元素为负无穷
+max_indices = (0, 0)  # 初始化最大元素的索引为(0, 0)
+
+# 逐行遍历输入的元素
+for i in range(m):
+    row = list(map(int, input().split()))  # 读取一行元素
+    for j in range(n):
+        if row[j] > max_element:
+            max_element = row[j]  # 更新最大元素
+            max_indices = (i, j)  # 更新最大元素的索引
+
+# 输出最大元素的索引
+print(max_indices[0], max_indices[1])
+
+或是
+
+n, m = [int(i) for i in input().split()]
+a = [[int(j) for j in input().split()] for i in range(n)]
+best_i, best_j = 0, 0
+curr_max = a[0][0]
+for i in range(n):
+    for j in range(m):
+        if a[i][j] > curr_max:
+            curr_max = a[i][j]
+            best_i, best_j = i, j
+print(best_i, best_j)
+
+-----------------------------------
+Snowflake：
+
+n = int(input("请输入一个奇数整数 n："))
+
+# 创建一个大小为 (n×n) 的二维数组，并用"."填充所有元素
+array = [["." for _ in range(n)] for _ in range(n)]
+
+# 用"*"填充中间行、中间列和对角线
+middle = n // 2  # 中间位置的索引
+for i in range(n):
+    array[i][middle] = "*"
+    array[middle][i] = "*"
+    array[i][i] = "*"
+    array[i][n - 1 - i] = "*"
+
+# 打印二维数组
+for row in array:
+    print(" ".join(row))
+
+或是
+
+n = int(input())
+a = [['.'] * n for i in range(n)]
+for i in range(n):
+    a[i][i] = '*'
+    a[n // 2][i] = '*'
+    a[i][n // 2] = '*'
+    a[i][n - i - 1] = '*'
+for row in a:
+    print(' '.join(row))
+
+-----------------------------------
+Chess board：
+
+n, m = map(int, input("请输入两个整数 n 和 m：").split())
+
+# 创建一个大小为 (n×m) 的二维数组，并用 "." 填充所有元素
+chessboard = [['.' for _ in range(m)] for _ in range(n)]
+
+# 填充棋盘图案，左上角为 "."
+for i in range(n):
+    for j in range(m):
+        if (i + j) % 2 == 1:
+            chessboard[i][j] = '*'
+
+# 打印二维数组
+for row in chessboard:
+    print(' '.join(row))
+
+或是
+
+n, m = [int(i) for i in input().split()]
+a = []
+for i in range(n):
+    a.append([])
+    for j in range(m):
+        if (i + j) % 2 == 0:
+            a[i].append('.')
+        else:
+            a[i].append('*')
+for row in a:
+    print(' '.join(row)) 
+-----------------------------------
+The diagonal parallel to the main：
+
+n = int(input("请输入一个整数 n: "))
+
+# 创建一个大小为 (n×n) 的二维数组，并用 0 填充所有元素
+array = [[0 for _ in range(n)] for _ in range(n)]
+
+# 填充对角线和相邻对角线上的数字
+for i in range(n):
+    for j in range(n):
+        array[i][j] = abs(i - j)
+
+# 打印二维数组
+for row in array:
+    print(' '.join(map(str, row)))
+
+或是
+
+n = int(input())
+a = [[abs(i - j) for j in range(n)] for i in range(n)]
+for row in a:
+    print(' '.join([str(i) for i in row]))
+
+-----------------------------------
+Side diagonal：
+
+n = int(input("请输入整数 n："))
+
+# 创建一个大小为 (n x n) 的二维数组，所有元素初始化为0
+array = [[0 for _ in range(n)] for _ in range(n)]
+
+# 填充数组
+for i in range(n):
+    for j in range(n):
+        if i + j == n - 1:  # 次对角线（从右上角到左下角）
+            array[i][j] = 1
+        elif i + j < n - 1:  # 次对角线上方
+            array[i][j] = 0
+        else:  # 次对角线下方
+            array[i][j] = 2
+
+# 打印数组
+for row in array:
+    print(*row)
+
+或是
+
+n = int(input())
+a = [[0] * n for i in range(n)]
+for i in range(n):
+    a[i][n - i - 1] = 1
+for i in range(n):
+    for j in range(n - i, n):
+        a[i][j] = 2
+for row in a:
+    for elem in row:
+        print(elem, end=' ')
+    print()
+
+-----------------------------------
+Swap the columns：
+
+def swap_columns(matrix, col1, col2):
+    for row in matrix:
+        row[col1], row[col2] = row[col2], row[col1]
+
+# 输入矩阵的行数 m 和列数 n
+m, n = map(int, input("请输入 m 和 n：").split())
+
+# 输入矩阵的元素
+matrix = []
+for _ in range(m):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+# 输入要交换的列 i 和 j
+i, j = map(int, input("请输入要交换的列 i 和 j：").split())
+
+# 调用 swap_columns 函数交换列
+swap_columns(matrix, i, j)
+
+# 打印交换后的矩阵
+for row in matrix:
+    print(*row)
+
+或是
+
+def swap_columns(a, i, j):
+    for k in range(len(a)):
+        a[k][i], a[k][j] = a[k][j], a[k][i]
+
+n, m = [int(i) for i in input().split()]
+a = [[int(j) for j in input().split()] for i in range(n)]
+i, j = [int(i) for i in input().split()]
+swap_columns(a, i, j)
+print('\n'.join([' '.join([str(i) for i in row]) for row in a]))
+
+-----------------------------------
+Scale a matrix：
+
+# 输入矩阵的行数 m 和列数 n
+m, n = map(int, input("请输入 m 和 n：").split())
+
+# 输入矩阵的元素
+matrix = []
+for _ in range(m):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+# 输入要乘以的整数 c
+c = int(input("请输入整数 c："))
+
+# 将矩阵的每个元素乘以 c
+for row in matrix:
+    for i in range(n):
+        row[i] *= c
+
+# 打印结果
+for row in matrix:
+    print(*row)
+
+或是
+
+m, n = [int(k) for k in input().split()]
+A = [[int(k) for k in input().split()] for i in range(m)]
+c = int(input())
+
+for i in range(m):
+    for j in range(n):
+        A[i][j] *= c
+
+print('\n'.join([' '.join([str(k) for k in row]) for row in A]))
+
+-----------------------------------
+Multiply two matrices：
+
+# 步驟1：讀取輸入數值
+m, n, r = map(int, input().split())
+
+# 讀取矩陣A
+A = []
+for _ in range(m):
+    row = list(map(int, input().split()))
+    A.append(row)
+
+# 讀取矩陣B
+B = []
+for _ in range(n):
+    row = list(map(int, input().split()))
+    B.append(row)
+
+# 步驟2：創建一個空的結果矩陣C
+C = [[0 for _ in range(r)] for _ in range(m)]
+
+# 步驟3：執行矩陣乘法
+for i in range(m):
+    for k in range(r):
+        for j in range(n):
+            C[i][k] += A[i][j] * B[j][k]
+
+# 步驟4：列印結果矩陣C
+for row in C:
+    print(*row)
+
+或是
+
+m, n, r = [int(k) for k in input().split()]
+A = [[int(k) for k in input().split()] for i in range(m)]
+B = [[int(k) for k in input().split()] for j in range(n)]
+C = [[0]*r for i in range(m)]
+
+for i in range(m):
+    for k in range(r):
+        for j in range(n):
+            C[i][k] += A[i][j] * B[j][k]
+
+print('\n'.join([' '.join([str(k) for k in row]) for row in C]))
+
+===================
+
+===================
+The number of distinct numbers：
+
+integer_list = list(map(int, input().split()))
+unique_numbers = len(set(integer_list))
+print(unique_numbers)
+
+或是
+
+numbers = input().split()  # 讀取整數列，預設按空格分隔
+unique_numbers = set(numbers)  # 使用set來獲得不同的數字
+count = len(unique_numbers)  # 計算不同數字的數量
+print(count)
+
+或是
+
+print(len(set(input().split())))
+-----------------------------------
+The number of equal numbers：
+
+# 從使用者那裡輸入兩個數字列表
+user_input1 = input("輸入第一個數字列表（以逗號分隔）：")
+user_input2 = input("輸入第二個數字列表（以逗號分隔）：")
+
+# 將輸入的字符串轉換為整數列表
+list1 = [int(x.strip()) for x in user_input1.split()]
+list2 = [int(x.strip()) for x in user_input2.split()]
+
+# 計算兩個列表中出現的唯一數字數量
+unique_count = len(set(list1) & set(list2))
+
+# 列印結果
+print(unique_count)
+
+或是
+
+print(len(set(input().split()) & set(input().split())))
+-----------------------------------
+The intersection of sets：
+
+list1 = list(map(int, input("輸入第一個數字列表（以空格分隔）：").split()))
+list2 = list(map(int, input("輸入第二個數字列表（以空格分隔）：").split()))
+
+result = sorted(set(list1) & set(list2))
+for x in result:
+  print(x)
+
+或是
+
+print(*sorted(set(input().split()) & set(input().split()), key=int))
+-----------------------------------
+Has the number been encountered before：
+
+# 輸入一個數字序列，例如：1 2 2 3 4 4
+numbers = list(map(int, input("輸入一個數字序列，以空格分隔：").split()))
+encountered = set()  # 用集合來存儲已經遇到的數字
+
+for number in numbers:
+    if number in encountered:
+        print("YES")
+    else:
+        print("NO")
+        encountered.add(number)  # 將該數字加入已經遇到的集合
+
+或是
+
+numbers = [int(s) for s in input().split()]
+occur_before = set()
+for num in numbers:
+    if num in occur_before:
+        print('YES')
+    else:
+        print('NO')
+        occur_before.add(num)
+
+-----------------------------------
+Cubes：
+
+# 輸入愛麗絲和鮑勃的集合大小
+n, m = map(int, input().split())
+
+# 創建愛麗絲和鮑勃的立方體顏色集合
+alice_colors = set()
+bob_colors = set()
+
+# 讀取愛麗絲的立方體顏色
+for _ in range(n):
+    color = int(input())
+    alice_colors.add(color)
+
+# 讀取鮑勃的立方體顏色
+for _ in range(m):
+    color = int(input())
+    bob_colors.add(color)
+
+# 找到交集和差異
+intersection = alice_colors.intersection(bob_colors)
+alice_only = alice_colors.difference(bob_colors)
+bob_only = bob_colors.difference(alice_colors)
+
+# 列印結果
+print(len(intersection), *sorted(intersection))
+print(len(alice_only), *sorted(alice_only))
+print(len(bob_only), *sorted(bob_only))
+
+或是
+
+def print_set(some_set):
+    print(len(some_set))
+    print(*[str(item) for item in sorted(some_set)])
+
+N, M = [int(s) for s in input().split()]
+A_colors, B_colors = set(), set()
+for i in range(N):
+    A_colors.add(int(input()))
+for i in range(M):
+    B_colors.add(int(input()))
+    
+print_set(A_colors & B_colors)
+print_set(A_colors - B_colors)
+print_set(B_colors - A_colors)
+
+-----------------------------------
+The number of distinct words in some text：
+
+# 读取数字 n
+n = int(input())
+
+# 创建一个空集合来存储不同的单词
+distinct_words = set()
+
+# 处理每行文本
+for _ in range(n):
+    line = input().strip()  # 读取并去除首尾空格
+    words = line.split()    # 使用空格作为分隔符将行拆分为单词
+    distinct_words.update(words)  # 将单词添加到集合中
+
+# 打印不同单词的数量
+print(len(distinct_words))
+
+或是
+
+words = set()
+for _ in range(int(input())):
+    words.update(input().split())
+print(len(words))
+-----------------------------------
+Guess the number：
+
+# 读取 n 的值
+n = int(input())
+
+# 创建一个包含 1 到 n 所有数字的集合
+possible_numbers = set(range(1, n + 1))
+
+while True:
+    try:
+        # 读取 Beatrice 的输入
+        line = input()
+        if line == "HELP":
+            break  # 如果 Beatrice 请求帮助，跳出循环
+        else:
+            # 处理 Beatrice 的猜测
+            numbers = set(map(int, line.split()))
+            response = input()  # 读取 Augustus 的响应
+            if response == "YES":
+                # 如果 Augustus的答案是 YES，更新可能的数字列表
+                possible_numbers.intersection_update(numbers)
+            elif response == "NO":
+                # 如果 Augustus的答案是 NO，从可能的数字列表中删除Beatrice的猜测
+                possible_numbers.difference_update(numbers)
+    except EOFError:
+        break
+
+# 打印所有可能的秘密数字
+sorted_numbers = sorted(possible_numbers)
+result = " ".join(map(str, sorted_numbers))
+print(result)
+
+或是
+
+n = int(input())
+all_nums = set(range(1, n + 1))
+possible_nums = all_nums
+while True:
+    guess = input()
+    if guess == 'HELP':
+        break
+    guess = {int(x) for x in guess.split()}
+    answer = input()
+    if answer == 'YES':
+        possible_nums &= guess
+    else:
+        possible_nums &= all_nums - guess
+
+print(' '.join([str(x) for x in sorted(possible_nums)]))
+
+----------------------------------
+Polyglots：
+
+# 从标准输入中读取学生和语言信息
+num_students = int(input())
+languages_spoken_by_student = []
+
+for _ in range(num_students):
+    num_languages = int(input())
+    student_languages = set()
+    for _ in range(num_languages):
+        language = input()
+        student_languages.add(language)
+    languages_spoken_by_student.append(student_languages)
+
+# 计算所有学生共同使用的语言
+languages_spoken_by_all_students = set.intersection(*languages_spoken_by_student)
+
+# 计算至少一个学生使用的语言
+languages_spoken_by_at_least_one_student = set.union(*languages_spoken_by_student)
+
+# 打印结果
+print(len(languages_spoken_by_all_students))
+for language in sorted(languages_spoken_by_all_students):
+    print(language)
+
+print(len(languages_spoken_by_at_least_one_student))
+for language in sorted(languages_spoken_by_at_least_one_student):
+    print(language)
+
+或是
+
+students = [{input() for j in range(int(input()))} for i in range(int(input()))]
+known_by_everyone, known_by_someone = set.intersection(*students), set.union(*students)
+print(len(known_by_everyone), *sorted(known_by_everyone), sep='\n')
+print(len(known_by_someone), *sorted(known_by_someone), sep='\n')
+
+===================
+
+===================
+
+----------------------------------
+或是
+-----------------------------------
+
+或是
+-----------------------------------
+
+或是
+-----------------------------------
+
+或是
+-----------------------------------
+
+或是
+-----------------------------------
+
+或是
+-----------------------------------
+
+或是
+----------------------------------

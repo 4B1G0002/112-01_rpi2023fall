@@ -1,0 +1,11 @@
+python grading.pyc	測試程式
+python testing.pyc	隨機測試100組資料
+cp -r rpi2023fall-pub/week05-ex 	複製程式資料夾
+
+
+
+README	作業說明
+main	作業編輯區
+
+
+測試程式，務必在程式目錄底下測試。
