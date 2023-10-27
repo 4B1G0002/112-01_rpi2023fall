@@ -1,0 +1,127 @@
+Error Python_week06
+# 錯誤程式 請勿抄襲
+# Wrong program. Please do not plagiarize.
+--------------------------------------------------
+# Problem Statement: Find the First and Last Occurrence
+
+def findCh(istr, ch):
+    first_index = istr.find(ch)  # 查找字符第一次出现的位置
+    last_index = istr.rfind(ch)  # 查找字符最后一次出现的位置
+
+    if first_index != -1:  # 如果字符在字符串中出现
+        if first_index == last_index:
+            return first_index  # 如果字符只出现一次，返回其索引
+        else:
+            return f"{first_index} {last_index}"  # 如果字符出现多次，返回第一次和最后一次的索引
+    else:
+        return None  # 如果字符未在字符串中出现
+
+def main():
+    input_str = input()
+    target_char = input()
+    
+    result = findCh(input_str, target_char)
+    
+    print(result)
+
+if __name__ == "__main__":
+    main()
+
+===========================
+# Problem Statement: The third occurrence
+
+def find3rd(istr, ch):
+    count = 0
+    for i in range(len(istr)):
+        if istr[i] == ch:
+            count += 1
+            if count == 3:
+                return i
+    if count == 0:
+        return -2
+    else:
+        return -1
+
+def main():
+    input_str = input("请输入一个字符串: ")
+    target_char = input("请输入要查找的字符: ")
+    
+    result = find3rd(input_str, target_char)
+    
+    print(result)
+
+if __name__ == "__main__":
+    main()
+
+===========================
+# Problem Statement: Capitalize Every Word in a String
+
+def capEachWord(istr):
+    words = istr.split()  # 将字符串拆分成单词列表
+    capitalized_words = [word.capitalize() for word in words]  # 首字母大写每个单词
+    return ' '.join(capitalized_words)  # 将首字母大写后的单词重新组合成字符串
+
+def main():
+    input_str = input("请输入一个字符串: ")
+    result = capEachWord(input_str)
+    print(result)
+
+if __name__ == "__main__":
+    main()
+
+===========================
+# Problem Statement: Replace Only Odd Occurrences of `h`
+
+def replaceOdd(istr):
+    # Initialize a counter for odd occurrences
+    odd_counter = 1
+
+    # Convert the string to a list to make modifications easier
+    char_list = list(istr)
+
+    # Iterate through the characters in the list
+    for i in range(len(char_list)):
+        if char_list[i] == 'h':
+            # Check if the occurrence is odd
+            if odd_counter % 2 == 1:
+                # Replace 'h' with 'H' for odd occurrences
+                char_list[i] = 'H'
+            # Increment the odd counter for every 'h' encountered
+            odd_counter += 1
+
+    # Convert the list back to a string
+    result = ''.join(char_list)
+
+    return result
+
+if __name__ == "__main__":
+    example1()
+===========================
+# Problem Statement: Processing Tags to Render Custom-Built Text
+
+def procTags(istr):
+    result = ""
+    i = 0
+    while i < len(istr):
+        if istr[i:i+3] == "<c>":
+            i += 3
+            while i < len(istr) and istr[i:i+4] != "</c>":
+                result += istr[i].upper()
+                i += 1
+            i += 4
+        elif istr[i:i+3] == "<r>":
+            i += 3
+            reverse_text = ""
+            while i < len(istr) and istr[i:i+4] != "</r>":
+                reverse_text = istr[i] + reverse_text
+                i += 1
+            result += reverse_text
+            i += 4
+        else:
+            result += istr[i]
+            i += 1
+    return result
+
+user_input = input("請輸入文本: ")
+output_text = procTags(user_input)
+print(output_text)
