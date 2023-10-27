@@ -2167,3 +2167,289 @@ students = [{input() for j in range(int(input()))} for i in range(int(input()))]
 known_by_everyone, known_by_someone = set.intersection(*students), set.union(*students)
 print(len(known_by_everyone), *sorted(known_by_everyone), sep='\n')
 print(len(known_by_someone), *sorted(known_by_someone), sep='\n')
+
+
+
+
+===================
+11 Dictionaries:
+===================
+Number of occurrences：
+
+text = input().split()
+word_count = {}
+
+for word in text:
+    if word not in word_count:
+        word_count[word] = 0
+    print(word_count[word], end=" ")
+    word_count[word] += 1
+
+或是
+
+counter = {}
+for word in input().split():
+    counter[word] = counter.get(word, 0) + 1
+    print(counter[word] - 1, end=' ')
+-----------------------------------
+Dictionary of synonyms：
+
+#
+# nice developers solution
+n = int(input())
+d = {}
+for i in range(n):
+    first, second = input().split()
+    d[first] = second
+    d[second] = first
+print(d[input()])
+
+# my solution
+# n = int(input())
+# synonyms = {}
+# for i in range(n):
+#    pair = input().split()
+#    synonyms[pair[0]] = pair[1]
+# word = input()
+# for key in synonyms:
+#    if key == word:
+#        print(synonyms[key])
+#    if synonyms[key] == word:
+#        print(key)
+#
+-----------------------------------
+Elections in the USA：
+
+#
+# nice developers solution
+num_votes = {}
+for _ in range(int(input())):
+    candidate, votes = input().split()
+    num_votes[candidate] = num_votes.get(candidate, 0) + int(votes)
+
+for candidate, votes in sorted(num_votes.items()):
+    print(candidate, votes)
+
+# my solution
+# n = int(input())
+# d = {}
+# for i in range(n):
+#    key, val = input().split()
+#    if key in d:
+#        d[key] += int(val)
+#    else:
+#        d[key] = int(val)
+# for key, val in sorted(d.items()):
+#    print(key, val)
+#
+
+
+-----------------------------------
+The most frequent word：
+
+#
+# nice developers solution
+counter = {}
+for i in range(int(input())):
+    line = input().split()
+    for word in line:
+        counter[word] = counter.get(word, 0) + 1
+        
+max_count = max(counter.values())
+most_frequent = [k for k, v in counter.items() if v == max_count]
+print(min(most_frequent))
+
+# my solution
+# max = 0
+# for _ in range(n):
+#     for word in input().split():
+#         if word in d:
+#             d[word] += 1
+#         else:
+#             d[word] = 1
+#         if d[word] > max:
+#             max = d[word]
+# for key, val in sorted(d.items()):
+#     if val == max:
+#         print(key)
+#         break
+#
+
+或是
+
+counter = {}
+for i in range(int(input())):
+    line = input().split()
+    for word in line:
+        counter[word] = counter.get(word, 0) + 1
+        
+max_count = max(counter.values())
+most_frequent = [k for k, v in counter.items() if v == max_count]
+print(min(most_frequent))
+
+-----------------------------------
+Access rights：
+
+#
+# nice developers solution
+ACTION_PERMISSION = {
+    'read': 'R',
+    'write': 'W',
+    'execute': 'X',
+}
+
+file_permissions = {}
+for i in range(int(input())):
+    file, *permissions = input().split()
+    file_permissions[file] = set(permissions)
+
+for i in range(int(input())):
+    action, file = input().split()
+    if ACTION_PERMISSION[action] in file_permissions[file]:
+        print('OK')
+    else:
+        print('Access denied')
+
+
+# my solution
+# permissions = {}
+# n = int(input())
+# for _ in range(n):
+#     s = input().split()
+#     permissions[s[0]] = set(s[1:])
+# for _ in range(int(input())):
+#     perm, file = input().split()
+#     if perm == 'read':
+#         perm = 'R'
+#     if perm == 'write':
+#         perm = 'W'
+#     if perm == 'execute':
+#         perm = 'X'
+#     if perm in permissions[file]:
+#         print('OK')
+#     else:
+#         print('Access denied')
+#
+
+或是
+
+OPERATION_PERMISSION = {
+    'read': 'R',
+    'write': 'W',
+    'execute': 'X',
+}
+
+file_permissions = {}
+for i in range(int(input())):
+    file, *permissions = input().split()
+    file_permissions[file] = set(permissions)
+
+for i in range(int(input())):
+    operation, file = input().split()
+    if OPERATION_PERMISSION[operation] in file_permissions[file]:
+        print('OK')
+    else:
+        print('Access denied')
+
+-----------------------------------
+Countries and cities：
+
+#
+n = int(input())
+cities = {}
+for _ in range(n):
+    line = input().split()
+    for city in line[1:]:
+        cities[city] = line[0]
+
+for _ in range(int(input())):
+    print(cities[input()])
+
+# developers solution
+# motherland = {}
+# for i in range(int(input())):
+#     country, *cities = input().split()
+#     for city in cities:
+#         motherland[city] = country
+        
+# for i in range(int(input())):
+#     print(motherland[input()])
+#
+
+或是
+
+motherland = {}
+for i in range(int(input())):
+    country, *cities = input().split()
+    for city in cities:
+        motherland[city] = country
+        
+for i in range(int(input())):
+    print(motherland[input()])
+-----------------------------------
+Frequency analysis：
+
+#
+# this is my solution, taken from community
+counter = {}
+for i in range(int(input())):
+    line = input().split()
+    for word in line:
+        counter[word] = counter.get(word, 0) + 1
+
+for i in sorted(counter.items(), key=lambda x:(-x[1],x[0])): 
+    print(i[0])
+
+# developers solution
+# from collections import Counter
+
+# words = []
+# for _ in range(int(input())):
+#     words.extend(input().split())
+
+# counter = Counter(words)
+# pairs = [(-pair[1], pair[0]) for pair in counter.most_common()]
+# words = [pair[1] for pair in sorted(pairs)]
+# print('\n'.join(words))
+#
+
+----------------------------------
+English-Latin dictionary：
+
+#
+from collections import defaultdict
+
+# 读取英语-拉丁字典
+n = int(input())
+english_to_latin = defaultdict(list)
+
+for _ in range(n):
+    line = input().split(" - ")
+    english_word = line[0]
+    latin_translations = line[1].split(", ")
+    for latin_word in latin_translations:
+        english_to_latin[latin_word].append(english_word)
+
+# 根据字母顺序排序拉丁-英语字典
+latin_to_english = sorted(english_to_latin.items())
+
+# 输出拉丁-英语字典
+print(len(latin_to_english))
+for latin_word, english_words in latin_to_english:
+    print(latin_word + " - " + ", ".join(sorted(english_words)))
+#
+
+或是
+
+from collections import defaultdict
+
+latin_to_english = defaultdict(list)
+for i in range(int(input())):
+    english_word, latin_translations_chunk = input().split(' - ')
+    latin_translations = latin_translations_chunk.split(', ')
+    for latin_word in latin_translations:
+        latin_to_english[latin_word].append(english_word)
+    
+print(len(latin_to_english))
+for latin_word, english_translations in sorted(latin_to_english.items()):
+    print(latin_word + ' - ' + ', '.join(english_translations))
