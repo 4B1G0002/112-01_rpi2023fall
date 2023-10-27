@@ -1,5 +1,120 @@
 # 錯誤程式 請勿抄襲
 # Wrong program. Please do not plagiarize.
+--------------------------------------------------
+prob01
+##
+def sign_pairs(numbers):
+    num_list = list(map(int, numbers.split()))
+    result = []
 
+    for i in range(len(num_list) - 1):
+        if num_list[i] * num_list[i + 1] > 0:
+            result.append([num_list[i], num_list[i + 1]])
 
+    return result #danielfeng
+
+def main():
+    user_input = input("请输入数字列表，以空格分隔: ")
+    result = sign_pairs(user_input)
+    
+    if result:
+        print(result)
+    else:
+        print()
+
+if __name__ == '__main__':
+    main()
+##
+--------------------------------------------------
+prob02
+##
+def sign_pairs(numbers):
+    numbers = list(map(int, numbers.split()))
+    result = []
+    i = 0
+    while i < len(numbers) - 1:
+        if (numbers[i] > 0 and numbers[i + 1] > 0) or (numbers[i] < 0 and numbers[i + 1] < 0):
+            result.append([numbers[i], numbers[i + 1]])
+            i += 2
+        else:
+            i += 1
+    return result if len(result) > 0 else []
+
+def main():
+    data = input("請輸入包含數字的字符串：") #danielfeng
+    result = sign_pairs(data)
+    print(result)
+
+if __name__ == '__main__':
+    main()
+##
+--------------------------------------------------
+prob03
+##
+def count_unique(numstr):
+    num_list = list(map(int, numstr.split()))
+    unique_count = 0
+    unique_elements = []
+
+    for num in num_list:
+        if num not in unique_elements:
+            unique_elements.append(num)
+            unique_count += 1 #danielfeng
+
+    return unique_count
+
+def main():
+    global data
+    for test_case in data:
+        result = count_unique(test_case)
+        print(result)
+
+if __name__ == '__main__':
+    main()
+##
+--------------------------------------------------
+prob04
+##
+def mysort(dat):
+    num_list = list(map(int, dat.split()))
+    sorted_list = ' '.join(map(str, sorted(num_list)))
+    return sorted_list #danielfeng
+
+def main():
+    global data
+    for test_case in data:
+        result = mysort(test_case)
+        print(result)
+
+if __name__ == '__main__':
+    main()
+##
+--------------------------------------------------
+prob05
+##
+def mysort(dat, start, end):
+    num_list = list(map(int, dat.split()))
+    
+    # 检查边界情况
+    if start >= end or start < 0 or end > len(num_list):
+        return dat
+
+    # 对指定范围内的整数进行排序
+    sorted_range = sorted(num_list[start:end])
+    
+    # 将排序后的范围替换回原始字符串
+    num_list[start:end] = sorted_range
+    sorted_string = ' '.join(map(str, num_list))
+    
+    return sorted_string #danielfeng
+
+def main():
+    global data
+    for test_case in data:
+        result = mysort(test_case, 5, 15)
+        print(result)
+
+if __name__ == '__main__':
+    main()
+##
 
