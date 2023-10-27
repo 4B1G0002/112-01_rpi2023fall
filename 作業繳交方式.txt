@@ -1,5 +1,5 @@
 常用指令：
-../testing	  驗證作業的答案 <必須進入練習/問題目錄>
+python grading.pyc	驗證作業的答案 <必須進入練習/問題目錄>
 ./grading	  驗證你的程式，並輸出成績報告
 ./mystatus	  查看已提交的所有 成績報告
 ./update-hw	  更新作業區
