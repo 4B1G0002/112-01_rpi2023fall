@@ -1,4 +1,8 @@
-3333Snakify
+Snakify 
+# 錯誤程式 請勿抄襲
+# Wrong program. Please do not plagiarize.
+===================
+02 Conditions: if, then, else:
 ===================
 Last digit of integer：
 a = int(input())
@@ -62,8 +66,11 @@ Clock face - 2：
 a = float(input())
 print(a % 30 * 12)
 
-===================
 
+
+
+===================
+03 Integer and float numbers:
 ===================
 Minimum of two numbers：
 a = int(input())
@@ -198,8 +205,10 @@ else:
     print('COMMON')
 
 
-===================
 
+
+===================
+04 For loop with range:
 ===================
 Series - 1：
 a=int(input())
@@ -341,8 +350,11 @@ missing_number = total_sum - remaining_sum
 # 打印遗失卡片上的数字
 print(missing_number)
 
-===================
 
+
+
+===================
+05 Strings:
 ===================
 Slices：
 
@@ -589,8 +601,12 @@ for i in range(len(s)):
     if i % 3 != 0:
         t = t + s[i]
 print(t)
-===================
 
+
+
+
+===================
+06 While loop:
 ===================
 List of squares：
 a = int(input())
@@ -1027,8 +1043,11 @@ while element != 0:
 max_rep_len = max(max_rep_len, curr_rep_len)
 print(max_rep_len)
 
-===================
 
+
+
+===================
+07 Lists:
 ===================
 Even indices：
 
@@ -1426,8 +1445,11 @@ for i in range(k):
         bahn[j] = '.'
 print(''.join(bahn))
 
-===================
 
+
+
+===================
+08 Functions and recursion
 ===================
 The length of the segment：
 
@@ -1629,8 +1651,11 @@ def fib(n):
 
 print(fib(int(input())))
 
-===================
 
+
+
+===================
+09 Two-dimensional lists (arrays)
 ===================
 Maximum：
 
@@ -1904,8 +1929,11 @@ for i in range(m):
 
 print('\n'.join([' '.join([str(k) for k in row]) for row in C]))
 
-===================
 
+
+
+===================
+10 Sets:
 ===================
 The number of distinct numbers：
 
@@ -2139,29 +2167,3 @@ students = [{input() for j in range(int(input()))} for i in range(int(input()))]
 known_by_everyone, known_by_someone = set.intersection(*students), set.union(*students)
 print(len(known_by_everyone), *sorted(known_by_everyone), sep='\n')
 print(len(known_by_someone), *sorted(known_by_someone), sep='\n')
-
-===================
-
-===================
-
-----------------------------------
-或是
------------------------------------
-
-或是
------------------------------------
-
-或是
------------------------------------
-
-或是
------------------------------------
-
-或是
------------------------------------
-
-或是
------------------------------------
-
-或是
-----------------------------------
